@@ -186,12 +186,12 @@ def get_complex_features(signal_a,signal_b,low_features_a,low_features_b):
 
 	return all_features
 
-def get_low_level_features(signal,w):
+def get_low_level_features(signal,w, Hz=20):
 
 	low_features = []
-	for i in np.arange(0,len(signal)-w*20,(w*20)//2):
-		pds = get_pds(signal[i:i+w*20])
-		low_features.append([signal[i:i+w*20].mean(), signal[i:i+w*20].std(), pds[0],pds[1],pds[2],pds[3],pds[4],pds[5]])
+	for i in np.arange(0,len(signal)-w*Hz,(w*Hz)//2):
+		pds = get_pds(signal[i:i+w*Hz])
+		low_features.append([signal[i:i+w*Hz].mean(), signal[i:i+w*Hz].std(), pds[0],pds[1],pds[2],pds[3],pds[4],pds[5]])
 
 	return np.asarray(low_features)
 
