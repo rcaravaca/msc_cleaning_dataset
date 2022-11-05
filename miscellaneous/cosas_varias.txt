@@ -1,0 +1,84 @@
+
+
+Fusion de decision
+
+optical flow: mubarak shah
+
+
+
+dia 1
+
+
+
+
+dia 3
+p3
+p4
+p8
+p9
+p13
+p15
+p21
+p22
+p28
+p31
+
+dia_1
+p23
+p24
+p31
+p35
+p37
+p38
+p39
+p40
+
+
+
+##########
+dia 1
+p21
+p17
+
+all_txt='p*/*txt p*/Shi*/*txt'
+for txt in $all_txt; 
+do
+count=$(grep '\[' $txt| awk -F"+","+" '{print $NF}' | sort | uniq -c | awk '{print $1}' | sort -r | head -n1) 
+echo "$txt+","+$count" >> count.csv
+done
+
+
+./tracking_centers_spliter/recover_videos.py -v /media/rcaravaca/Windows/Users/rcaravaca/Documents/Speed_dates/Video/Day1/Speed_date_part_1_cam04.mp4 -t individual_videos/day_1/p31/Speed_date_part_1_cam04_1_31410.txt -o individual_videos/day_1/p31/ -x 0 -y 0
+
+
+_[0-9]{1}_[0-9]{1+","+5}.csv -t
+
+./tracking_centers_spliter/recover_videos.py -v /media/rcaravaca/Windows/Users/rcaravaca/Documents/Speed_dates/Video/Day1/Speed_date_part2_cam08.mp4 -t individual_videos/day_3/p31/Speed_date_part2_cam08_1_8550.txt -o individual_videos/day_3/p31/ -x 0 -y 0
+
+mv participant_p21_date_9_Speed_date_part_2_cam05_3_2250.csv participant_p21_date_8_Speed_date_part_2_cam05_3_2250.csv
+mv participant_p21_date_10_Speed_date_part_2_cam05_3_9750.csv participant_p21_date_9_Speed_date_part_2_cam05_3_9750.csv
+mv participant_p21_date_11_Speed_date_part_2_cam05_1_17100.csv participant_p21_date_10_Speed_date_part_2_cam05_1_17100.csv
+mv participant_p21_date_12_Speed_date_part_2_cam05_1_24000.csv participant_p21_date_11_Speed_date_part_2_cam05_1_24000.csv
+mv participant_p21_date_13_Speed_date_part_2_cam04_1_32100.csv participant_p21_date_12_Speed_date_part_2_cam04_1_32100.csv
+mv participant_p21_date_14_Speed_date_part_2_cam04_1_38700.csv participant_p21_date_13_Speed_date_part_2_cam04_1_38700.csv
+mv participant_p21_date_15_Speed_date_part_2_cam03_2_46440.csv participant_p21_date_14_Speed_date_part_2_cam03_2_46440.csv
+
+
+p3
+p6
+p12
+p14
+p25
+p26
+p31
+
+
+for dir in $(ls -d dataset/train/day_1/*); do var=$(ls ${dir}/* | wc -l); echo "$dir -> $var" ; done
+
+
+
+####
+recover p13
+
+dataset_file.write(str(avg_difangle)+","+str(var_difangle)+","+str(avgdis)+","+str(vardis)+","+str(decardis)+","+str(movdistr_mean_a)+","+str(movdistr_var_a)+","+str(movdistr_mean_b)+","+str(movdistr_var_b)+","+str(motionsync_string)+","+str(motion_reaction_string)+","+str(varpos_a)+","+str(varpos_b))	
+

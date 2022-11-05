@@ -1,0 +1,153 @@
+
+
+
+#diay1
+
+for file in $(ls *Part_2.csv); 
+do ../split_wearables.sh 1640 $file;
+../split_wearables.sh 6640 $file;
+../split_wearables.sh 11540 $file;
+../split_wearables.sh 16140 $file;
+../split_wearables.sh 21540 $file;
+../split_wearables.sh 25940 $file; 
+../split_wearables.sh 31110 $file; 
+done
+
+
+
+for file in $(ls *Part_1.csv); 
+do ../split_wearables.sh 1 $file; 
+../split_wearables.sh 6810 $file; 
+../split_wearables.sh 10930 $file; 
+../split_wearables.sh 15510 $file; 
+../split_wearables.sh 20990 $file; 
+../split_wearables.sh 25410 $file; 
+../split_wearables.sh 31110 $file; 
+done
+
+10440
+16620
+23490
+31710
+38340
+46890
+
+
+for file in $(ls *Part_1.csv); 
+do ../split_wearables.sh 1 $file; 
+../split_wearables.sh 6810 $file; 
+../split_wearables.sh 10930 $file; 
+../split_wearables.sh 15510 $file; 
+../split_wearables.sh 20990 $file; 
+../split_wearables.sh 25410 $file; 
+../split_wearables.sh 31110 $file; 
+done
+
+
+
+# day2
+
+for file in $(ls *Part_*.csv); 
+do ../split_wearables.sh 1 $file; 
+../split_wearables.sh 5780 $file; 
+../split_wearables.sh 10140 $file; 
+../split_wearables.sh 15060 $file; 
+../split_wearables.sh 19980 $file; 
+../split_wearables.sh 24660 $file; 
+../split_wearables.sh 29480 $file; 
+done
+
+0
+5780
+10140
+15060
+19980
+24660
+29480
+
+
+# day3
+
+for file in $(ls *Part_1.csv); 
+do ../split_wearables.sh 860 $file; 
+../split_wearables.sh 5800 $file; 
+../split_wearables.sh 10800 $file; 
+../split_wearables.sh 15300 $file; 
+../split_wearables.sh 20200 $file; 
+../split_wearables.sh 24700 $file; 
+../split_wearables.sh 29400 $file; 
+done
+
+
+for file in $(ls *Part_2.csv); 
+do ../split_wearables.sh 860 $file; 
+../split_wearables.sh 5800 $file; 
+../split_wearables.sh 10600 $file; 
+../split_wearables.sh 15200 $file; 
+../split_wearables.sh 20200 $file; 
+../split_wearables.sh 24700 $file; 
+../split_wearables.sh 30200 $file; 
+../split_wearables.sh 35000 $file; 
+done
+
+
+860
+5800
+10600
+15200
+20200
+24700
+30200
+35000
+38080
+
+
+
+
+for file in $(ls *part1*); do
+echo "mv ${file} `ls -d $file | sed s/part1/part_1/g`"
+done
+
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global user.password johndoe@example.com
+
+git config credential.helper store
+
+for file in $(ls -d spliter/individual_videos/day_2/p* dataset); do
+git add $file
+git commit -m "Adding $file"
+git push
+done
+
+
+--->>
+como construir la citas?
+las instancias
+optical flow
+predefensa
+
+
+
+--> A seguir
+- obtener la citas
+- Datos de distancias
+- datos de wareables
+
+
+individual_videos/day_1/p21/participant_p21_date_9_Speed_date_part_2_cam05_3_9750.avi
+
+cat pairwise_date_response.csv | grep -v Part_Num | awk -F"," '{print $1}' | sort -n -u | awk '{print "mkdir dataset/train/day_1"$1}' > create_date_folders.csh
+
+cat pairwise_date_response.csv | grep -v Part_Num | awk -F"," '{if ($4 == 2) print $1}' | sort -n -u | awk '{print "mkdir dataset/train/day_2/"$1}' > create_date_folders.csh 
+
+
+cat pairwise_date_response.csv | grep -v Part_Num | awk -F"," '{if ($4 == 1) print "cd dataset/train/day_1/"$1"; ln -s ../../../../spliter/individual_videos/day_"$4"/p"$3"/participant_p"$3"_date_"$6"_Speed_date_part_*_cam* ./ ; cd ../../../../"}'
+
+
+
+cat pairwise_date_response.csv | grep -v Part_Num | awk -F"," '{if ($4 == 3 && $13 == 2) print "cd dataset/test/day_"$4"/"$1"; ln -s ../../../../Acceleration/Day"$4"/p"$3"/Date_"$6"_Participant_"$3"_Speed_Date_Part* F_accel_Date_"$6"_Participant_"$3".csv ; cd ../../../../"}'
+
+
+Acceleration/Day1/p11/Participant_11_Speed_Date_Part_1_1.csv
