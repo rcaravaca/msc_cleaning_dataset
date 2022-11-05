@@ -12,6 +12,8 @@
 ```
 
 ## Final dataset used
+
+This Dataset is already aligned and filtered.
 ```
 dataset/oficial_dataset/dataset_video.csv
 dataset/oficial_dataset/dataset_werables.csv
