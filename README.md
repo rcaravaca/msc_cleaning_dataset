@@ -18,3 +18,22 @@ This Dataset is already aligned and filtered.
 dataset/oficial_dataset/dataset_video.csv
 dataset/oficial_dataset/dataset_werables.csv
 ```
+
+## Required Python3 Packages
+
+```
+datetime
+progress
+scipy
+sklearn
+argparse
+cv2
+glob
+inspect
+matplotlib
+numpy
+fnmatch
+os
+re
+```
+
